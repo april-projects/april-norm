@@ -32,4 +32,4 @@
 
 ​	提交示例，图标地址[传送门](https://gitmoji.dev/)
 
-![](https://github.com/april-projects/april-norm/blob/main/ima/image-20220608102324028.png)
+![](https://github.com/april-projects/april-norm/blob/main/img/image-20220608102324028.png)
