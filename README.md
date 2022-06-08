@@ -14,9 +14,10 @@
 
 
 
-<div style="width:100%;height:850px;overflow-x:auto;overflow-y:auto">
-    <img src="https://github.com/april-projects/april-norm/blob/main/img/JavaDevelopmentManual(HuangshanEdition).png" alt="image">
+<div style="width:100%;height:600px;overflow-x:auto;overflow-y:auto">
+    <img src="https://github.com/april-projects/april-norm/blob/main/img/JavaDevelopmentManual(HuangshanEdition).png?raw=true" alt="image">
 <div>
+
 
 
 <embed id="pdfPlayer" src="https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.pdf" type="application/pdf" width="100%" height="800" >
