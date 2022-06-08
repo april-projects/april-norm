@@ -23,9 +23,144 @@
 <embed id="pdfPlayer" src="https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.pdf" type="application/pdf" width="100%" height="800" >
 
 
-## 三、编程技巧
+## 三、编程技巧（补充）
+
+### 一、注释规范
+
+* 禁用行尾注释
+* 方法或常量，成员变量，禁单行注释，应使用文档注释
+* 类注释模板
+
+~~~java
+/**
+  *software：IntelliJ IDEA 2022.1
+  *class name: ${NAME}
+  *class description： ${END}
+  *
+  *@author (作者名称) ${DATE} ${TIME}
+*/
+~~~
+
+* 枚举注释模板
+
+~~~java
+/**
+  *software：IntelliJ IDEA 2022.1
+  *enum name: ${NAME}
+  *enum description： ${END}
+  *
+  *@author (作者名称) ${DATE} ${TIME}
+*/
+~~~
+
+* 接口注释模板
+
+~~~java
+/**
+  *software：IntelliJ IDEA 2022.1
+  *interface name: ${NAME}
+  *interface description： ${END}
+  *接口描述： ${END}
+  *
+  *@author (作者名称) ${DATE} ${TIME}
+*/
+~~~
+
+* 注解注释模板
+
+~~~java
+/**
+  *software：IntelliJ IDEA 2022.1
+  *annotation name: ${NAME}
+  *annotation description： ${END}
+  *
+  *@author (作者名称) ${DATE} ${TIME}
+*/
+~~~
 
 
+
+### 二、建表规范
+
+* 遵循三大范式
+* 复杂字段之间用 （_） 下划线相隔，如（create_time，user_name）
+* 禁止使用外键关联
+* 主键字段使用（bigint）类型，Java 对应类型使用 Long 类型
+* 日期类型字段是 （datetime），Java对应 LocalDateTime 类型
+
+
+
+### 三、查询规范
+
+* 列表查询
+
+> 所有的列表查询都需要添加排序，已最后添加的数据显示在第一列，以 bigint 类型作为排序字段，如（主键 id ）
+
+* 操作集合尽量使用 stream 和 lambda 表达式,工具类地址（com.mobaijun.common.util.stream）
+
+
+
+### 四、返回规范
+
+> * 项目中定义了三个返回类，目录地址（com.mobaijun.common.result）
+>   * AbstractTip<T> 泛型父类，返回值
+>   * SuccessTip<T> 成功返回
+>   * ErrorTip<T> 异常返回
+> * 项目中返回只能在 controller 层进行操作，禁止在业务层（service）实行（AbstractTip/Success/Error）返回
+> * 业务层如果需要异常处理，使用 throw new Exception("");
+
+
+
+### 五、增删改查返回规范
+
+  * 新增：返回 boolean 类型或 int 类型
+  * 修改：返回 boolean 类型或 int 类型
+  * 删除：返回 int 类型
+  * 查询：返回 List<Entity> 类型或 Entity 类型
+  * 批量：返回 int 类型
+
+
+
+### 六、接口规范
+
+  * 类定义信息为 @Api(tags = {"一级目录-二级目录-业务类型"}, description = "具体描述")
+  * 查询使用：@GetMapping(value = "/${methodName}")
+  * 新增使用：@PostMapping(value = "/${methodName}")
+  * 修改使用：@PostMapping(value = "/${methodName}")
+  * 单个删除：@DeleteMapping(value = "/${methodName}")
+  * 批量删除：@DeleteMapping(value = "/${methodName}")
+
+> 命名规则：
+>
+>  * 单个删除（singleDelete）
+>  * 批量删除（batchDelete）
+>  * 新增 （insert[Entity]）
+>  * 修改 （update[Entity]）
+>  * 查询 （select[Entity]List）
+
+
+
+### 七、枚举定义规范
+
+1. 枚举如果没有set方法，属性需要使用 final 定义；
+2. 枚举每个字段需包含文档注释
+3. 枚举属性全部定义为大写，多个单纯之间以下划线分割
+
+~~~java
+@Getter
+@AllArgsConstructor
+public enum NameType {
+    /**
+     * 名称
+     */
+    FACTORY_NAME("name");
+    
+    /**
+     * 值
+     */
+    private final String value;
+}
+~~~
 
 
 
@@ -41,4 +176,4 @@
 
 ​	提交示例，图标地址[传送门](https://gitmoji.dev/)
 
-![](https://github.com/april-projects/april-norm/blob/main/img/image-20220608102324028.png)
+![](https://github.com/april-projects/april-norm/blob/main/img/image-20220608102324028.png?raw=true)
