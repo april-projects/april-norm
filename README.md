@@ -8,7 +8,7 @@
 
 ## 二、Java 编码规范
 
-​	Java 编程规范主要以阿里巴巴代码规约为主
+​	Java 编程规范主要以阿里巴巴代码规约为主 ( GitHub 无法预览 PDF，可以下载文档查看)
 
 <embed id="pdfPlayer" src="https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.pdf" type="application/pdf" width="100%" height="800" >
 
