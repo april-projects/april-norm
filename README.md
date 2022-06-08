@@ -11,8 +11,9 @@
 ​	Java 编程规范主要以阿里巴巴代码规约为主 ( GitHub 无法预览 PDF，所以将 PDF 转为图片了，如果不习惯，可以 clone 本仓库，使用 typora 可以以 PDF 方式查看)
 
 <div style="width:100%;height:850px;overflow-x:auto;overflow-y:auto">
-    <img src="https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.png" alt="image">
+    <img src="https://github.com/april-projects/april-norm/blob/main/img/JavaDevelopmentManual%28HuangshanEdition%29.png" alt="image">
 <div>
+
 
 <embed id="pdfPlayer" src="https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.pdf" type="application/pdf" width="100%" height="800" >
 
