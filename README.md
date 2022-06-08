@@ -10,8 +10,6 @@
 
 ​	Java 编程规范主要以阿里巴巴代码规约为主
 
-<iframe src="https://docs.google.com/gview?embedded=true&url=https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.pdf" style="width:800px; height:500px;" frameborder="0"></iframe>
-
 <embed id="pdfPlayer" src="https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.pdf" type="application/pdf" width="100%" height="800" >
 
 
@@ -34,4 +32,4 @@
 
 ​	提交示例，图标地址[传送门](https://gitmoji.dev/)
 
-![image-20220608102324028](../image/image-20220608102324028-16546556109779.png)
+![](https://github.com/april-projects/april-norm/blob/main/ima/image-20220608102324028.png)
