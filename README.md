@@ -184,15 +184,18 @@ public enum NameType {
 
 ### 八、编码技巧
 
-1. #### 成员变量
+#### 成员变量
 
-   * 成员变量禁用 idea 告警关键字，例如
-     * width、height
+* 成员变量禁用 idea 告警关键字，例如
+  * width、height
 
 
 
-2. 如遇到多资源关闭应使用（try-with-resources）语法
-   * 参考链接[传送地址](https://www.jianshu.com/p/258c5ce1a2bd)
+#### 异常处理
+
+> 如遇到多资源关闭应使用（try-with-resources）语法
+
+* 参考链接[传送地址](https://www.jianshu.com/p/258c5ce1a2bd)
 
 ~~~java
 // 代码示例
