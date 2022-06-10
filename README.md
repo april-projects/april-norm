@@ -17,11 +17,13 @@
 <div style="width:100%;height:600px;overflow-x:auto;overflow-y:auto">
     <img src="https://github.com/april-projects/april-norm/blob/main/img/JavaDevelopmentManual(HuangshanEdition).png?raw=true" alt="image">
 <div>
+---
+
 
 
 
 <embed id="pdfPlayer" src="https://cdn.mobaijun.com/pdf/JavaDevelopmentManual%28HuangshanEdition%29.pdf" type="application/pdf" width="100%" height="800" >
-
+---
 
 ## 三、编程技巧（补充）
 
@@ -78,6 +80,8 @@
 */
 ~~~
 
+---
+
 
 
 ### 二、建表规范
@@ -88,6 +92,8 @@
 * 主键字段使用（bigint）类型，Java 对应类型使用 Long 类型
 * 日期类型字段是 （datetime），Java对应 LocalDateTime 类型
 
+---
+
 
 
 ### 三、查询规范
@@ -97,6 +103,8 @@
 > 所有的列表查询都需要添加排序，已最后添加的数据显示在第一列，以 bigint 类型作为排序字段，如（主键 id ）
 
 * 操作集合尽量使用 stream 和 lambda 表达式,工具类地址（com.mobaijun.common.util.stream）
+
+---
 
 
 
@@ -109,6 +117,8 @@
 > * 项目中返回只能在 controller 层进行操作，禁止在业务层（service）实行（AbstractTip/Success/Error）返回
 > * 业务层如果需要异常处理，使用 throw new Exception("");
 
+---
+
 
 
 ### 五、增删改查返回规范
@@ -118,6 +128,8 @@
   * 删除：返回 int 类型
   * 查询：返回 List<Entity> 类型或 Entity 类型
   * 批量：返回 int 类型
+
+---
 
 
 
@@ -137,6 +149,8 @@
 >  * 新增 （insert[Entity]）
 >  * 修改 （update[Entity]）
 >  * 查询 （select[Entity]List）
+
+---
 
 
 
@@ -161,6 +175,38 @@ public enum NameType {
     private final String value;
 }
 ~~~
+
+---
+
+
+
+### 八、编码技巧
+
+1. #### 成员变量
+
+   * 成员变量禁用 idea 告警关键字，例如
+     * width、height
+
+
+
+2. 如遇到多资源关闭应使用（try-with-resources）语法
+   * 参考链接[传送地址](https://www.jianshu.com/p/258c5ce1a2bd)
+
+~~~java
+// 代码示例
+public void readFile() throws FileNotFoundException {
+    try (FileReader fr = new FileReader("d:/input.txt");BufferedReader br = new BufferedReader(fr)) {
+        String s = "";
+        while ((s = br.readLine()) != null) {
+            System.out.println(s);
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+~~~
+
+---
 
 
 
